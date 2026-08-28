@@ -67,7 +67,8 @@ data/processed/  cleaned/joined datasets ready for plotting
 ## Setup
 
 ```bash
-cd ~/Vibe\ Coding/step-free-london
+git clone https://github.com/intentionaut/step-free-london
+cd step-free-london
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
