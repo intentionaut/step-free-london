@@ -4,5 +4,4 @@ __pycache__/
 .ipynb_checkpoints/
 data/raw/
 data/processed/
-reports/step_free_london_map.html
 .DS_Store

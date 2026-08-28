@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Step-Free London — a civic data story</title>
+<style>
+  :root {
+    --paper: #f7e9e0;
+    --ink: #38234a;
+    --muted: #74607b;
+    --accent: #c85060;
+    --line: #e0d2cb;
+    --teal: #a9cbd0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Jost", "Avenir Next", Avenir, "Segoe UI", sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 48px 20px 24px; }
+  .eyebrow {
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+    font-weight: 520;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    margin-bottom: 14px;
+  }
+  .lede {
+    color: var(--muted);
+    max-width: 640px;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+  }
+  p.get {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 26px;
+  }
+  p.get a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+  p.get a:hover { color: var(--ink); }
+  .map-frame {
+    width: 100%;
+    height: 72vh;
+    min-height: 480px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: #fff;
+  }
+  .map-frame iframe { width: 100%; height: 100%; border: 0; border-radius: 4px; }
+  hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 26px 0 18px;
+  }
+  .legend { color: var(--muted); font-size: 0.9rem; max-width: 640px; }
+  .legend b { color: var(--ink); font-weight: 600; }
+  .swatch {
+    display: inline-block;
+    width: 10px; height: 10px; border-radius: 50%;
+    margin-right: 5px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">Civic data story</div>
+    <h1>Step-Free London</h1>
+    <p class="lede">
+      London prides itself on its public transport, but only a fraction of tube
+      stations are step-free. Where do disabled residents live relative to the
+      stations they can actually use — and which boroughs are worst served?
+    </p>
+    <p class="get">
+      Explore the analysis, data sources and the full story in the project
+      <a href="https://github.com/intentionaut/step-free-london">README</a>.
+    </p>
+
+    <div class="map-frame">
+      <iframe
+        src="reports/step_free_london_map.html"
+        title="Interactive map of step-free access at London tube stations"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <div class="legend" style="margin-top:14px">
+      Every station colour-coded by access status:
+      <span><span class="swatch" style="background:#2e7d32"></span>step-free</span>
+      <span><span class="swatch" style="background:#f9a825"></span>partial</span>
+      <span><span class="swatch" style="background:#c62828"></span>not step-free</span>
+    </div>
+
+    <hr />
+    <p class="legend">
+      Access status from OpenStreetMap, cross-checked against the TfL Unified API.
+      A fortnightly letter from Saielle DaSilva on design, product, data and AI —
+      <b>Intentionaut</b>.
+    </p>
+  </div>
+</body>
+</html>
