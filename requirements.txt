@@ -1,0 +1,6 @@
+pandas
+geopandas
+plotly
+folium
+requests
+jupyterlab
